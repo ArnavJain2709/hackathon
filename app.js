@@ -46,7 +46,7 @@ socket.onmessage = (event) => {
     }
 
     if (parsedData.command === "reset2") {
-      x2 = maxX / 4;
+      x2 = maxX * 0.75;
       y2 = maxY / 2;
       initialAlpha2 = null;
       initialBeta2 = null;
@@ -101,7 +101,7 @@ socket.onmessage = (event) => {
         y2 -= adjustedBeta * sensitivity;
       }
 
-      x2 = Math.max(0, Math.min(x2, maxX));
+      // x2 = Math.max(0, Math.min(x2, maxX));
       y2 = Math.max(0, Math.min(y2, maxY));
 
       circle2.style.left = `${x2}px`;
